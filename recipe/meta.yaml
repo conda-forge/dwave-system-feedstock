@@ -1,5 +1,5 @@
 {% set name = "dwave-system" %}
-{% set version = "1.13.1" %}
+{% set version = "1.14.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dwave-system-{{ version }}.tar.gz
-  sha256: d9863694065b51c7a0782686471412739bddc1e0a02ae66c94dc4079501b38e5
+  sha256: c8015f4c2d754c4ba92396dc3b54e62903bc46d080447a6492ec0c398a1e4a88
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - python >=3.7
   run:
     - dimod >=0.10.0,<0.13.0
-    - dwave-cloud-client >=0.9.1,<0.10.0
+    - dwave-cloud-client >=0.9.1,<0.11.0
     - dwave-networkx >=0.8.10
     - dwave-preprocessing >=0.3,<0.5
     - dwave-tabu >=0.4.2

@@ -1,5 +1,5 @@
 {% set name = "dwave-system" %}
-{% set version = "1.18.0" %}
+{% set version = "1.19.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dwave-system-{{ version }}.tar.gz
-  sha256: c35e0d4bab57a8e725cdc929a8de869b773113021b7431904875d391118e3fb7
+  sha256: 550f261932c2e5f79638331f1da8506910f3994dc43203915f0e12ef5730665c
 
 build:
   noarch: python

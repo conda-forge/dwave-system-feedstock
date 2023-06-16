@@ -20,7 +20,6 @@ requirements:
     - python >=3.7
   run:
     - dwave-samplers >=1.0.0
-    - dwave-greedy >=0.2.0
     - scipy >=1.7.3
     - dimod >=0.12.7,<0.14.0
     - dwave-cloud-client >=0.9.1,<0.11.0

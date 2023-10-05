@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python >=3.8
   run:
     - dwave-samplers >=1.0.0
     - scipy >=1.7.3
@@ -29,7 +29,7 @@ requirements:
     - minorminer >=0.2.8,<0.3.0
     - networkx >=2.0,<3.0
     - numpy >=1.20.0
-    - python >=3.7
+    - python >=3.8
   run_constrained:
     - dwave-drivers >=0.4.0,<0.5.0
 

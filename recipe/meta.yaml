@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dwave-system-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dwave-system-{{ version }}.tar.gz
   sha256: 705e71773e0535570fc29499341e881090bd7630e0d2cf8e75f18ba8f5154d4a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
   run:
     - dwave-samplers >=1.0.0
     - scipy >=1.7.3
@@ -28,7 +28,7 @@ requirements:
     - homebase >=1.0.0,<2.0.0
     - minorminer >=0.2.8,<0.3.0
     - numpy >=1.21.6
-    - python >=3.8
+    - python >={{ python_min }}
   run_constrained:
     - dwave-drivers >=0.4.0,<0.5.0
 
@@ -39,6 +39,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/dwavesystems/dwave-system
